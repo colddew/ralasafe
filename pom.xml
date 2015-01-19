@@ -16,4 +16,9 @@
 	<build>
 		<finalName>ralasafe</finalName>
 	</build>
+	
+	<modules>
+		<module>ralasafe-engine</module>
+		<module>ralasafe-manager</module>
+	</modules>
 </project>
