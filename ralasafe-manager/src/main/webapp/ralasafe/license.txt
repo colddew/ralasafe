@@ -1,0 +1,92 @@
+           RALASAFE LICENSE INFORMATION
+
+July 18, 2011
+
+The Ralasafe software and sample code developed by The Ralasafe Project is 
+licensed under the MIT License. Other software included in this distribution 
+is provided under other licenses, as listed in the Included Software and 
+Licenses section at the bottom of this page. Source code for software 
+included in this distribution is available from the Ralasafe project or 
+as otherwise indicated at the bottom of this page. 
+
+============================================================
+
+MIT License
+http://www.opensource.org/licenses/mit-license.php
+Copyright (c) 2004-2011 Wang Jinbao (Julian Wong), http://www.ralasafe.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+============================================================
+
+LICENSE INFORMATION REGARDING BUNDLED THIRD-PARTY SOFTWARE
+
+The following third party software is distributed with Ralasafe 
+software and is provided under other licenses.
+
+* BeanShell v2.0b4
+  Website: http://www.beanshell.org/
+  License: Dual Licensing: Sun Public License / Gnu Lesser Public License
+     http://www.sun.com/developers/spl.html
+     http://www.gnu.org/copyleft/lesser.html
+
+* Castor v1.2
+  Website: http://www.castor.org/
+  License: Apache License, Version 2.0
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+* DBCP/LOG4J/COMMON-LOGGING/FILE-UPLOAD/CODEC
+  Website: http://www.apache.org
+  License: Apache License, Version 2.0
+     http://www.apache.org/licenses/LICENSE-2.0
+
+* jQuery v1.4.2/jQuery UI v1.8.5
+  Website: http://jquery.com
+  License: Dual Licensing: MIT / GPL
+     http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+     http://github.com/jquery/jquery/blob/master/GPL-LICENSE.txt
+
+* zTree v2.6
+  Website: http://code.google.com/p/jquerytree/
+  License: MIT
+     http://www.opensource.org/licenses/mit-license.php
+
+* jQuery Form Plugin v2.49
+  Website: http://malsup.com/jquery/form/
+  License: Dual Licensing: MIT / GPL
+     http://www.opensource.org/licenses/mit-license.php
+     http://www.gnu.org/licenses/gpl.html
+
+* jQuery Validation Plugin v1.8.1
+  Website: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
+  License: Dual Licensing: MIT / GPL
+     http://www.opensource.org/licenses/mit-license.php
+     http://www.gnu.org/licenses/gpl.html
+     
+* SyntaxHighlighter v3.0.83
+  Website: http://alexgorbatchev.com/SyntaxHighlighter
+  License: Dual Licensing: MIT / GPL
+     http://www.opensource.org/licenses/mit-license.php
+     http://www.gnu.org/licenses/gpl.html     
+     
+* Mysql-connector v5.0.8(ONLY BUNDLED WITH RALASAFE DEMO DISTRIBUTION)
+  Website: http://www.mysql.com/downloads/connector/j/5.0.html#downloads
+  License: GPL License, Version 2
+     http://www.gnu.org/licenses/old-licenses/gpl-2.0.html        

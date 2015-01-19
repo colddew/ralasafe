@@ -51,7 +51,7 @@
 		<servlet-class>org.ralasafe.servlet.RalasafeController</servlet-class>
 		<init-param>
 			<param-name>repositoryDir</param-name>
-			<param-value>C:/Users/xjt/git/ralasafe_maven/ralasafe/src/main/webapp/xml</param-value>
+			<param-value>D:/workspace-luna/ralasafe/ralasafe-manager/src/main/webapp/xml</param-value>
 		</init-param>
 		<init-param>
 			<param-name>secured</param-name>
