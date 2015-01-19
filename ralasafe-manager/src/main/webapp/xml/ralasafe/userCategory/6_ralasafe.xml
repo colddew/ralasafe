@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userCategory name="营业部用户" isRawScript="false">
+    <defineVariable name="subBranchOfficeCompanyLevel">
+        <simpleValue type="integer">3</simpleValue>
+    </defineVariable>
+    <defineVariable name="userCompanyLevel">
+        <userValue key="companyLevel"/>
+    </defineVariable>
+    <exprGroup linker="AND">
+        <binaryExpr>
+            <variable1 name="subBranchOfficeCompanyLevel"/>
+            <simpleOperator>=</simpleOperator>
+            <variable2 name="userCompanyLevel"/>
+        </binaryExpr>
+    </exprGroup>
+    <rawScript>
+        <content xml:space="preserve"><![CDATA[]]></content>
+    </rawScript>
+</userCategory>

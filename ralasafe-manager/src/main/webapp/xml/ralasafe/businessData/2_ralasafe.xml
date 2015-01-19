@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessData name="单笔借款大于5000" isRawScript="false">
+    <defineVariable name="limit">
+        <simpleValue type="integer">5000</simpleValue>
+    </defineVariable>
+    <defineVariable name="loanMoney">
+        <hintValue hint="_$businessData" key="money"/>
+    </defineVariable>
+    <exprGroup linker="AND">
+        <binaryExpr>
+            <variable1 name="loanMoney"/>
+            <simpleOperator>&gt;</simpleOperator>
+            <variable2 name="limit"/>
+        </binaryExpr>
+    </exprGroup>
+    <rawScript>
+        <content xml:space="preserve"><![CDATA[]]></content>
+    </rawScript>
+</businessData>

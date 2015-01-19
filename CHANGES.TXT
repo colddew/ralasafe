@@ -1,0 +1,64 @@
+version:    2.0
+1, Implement requirement: 3434864
+
+BUG FIXED:
+1, Fix bugs: 3434866,3436029
+
+version:    1.2-v20110914
+1, Implement requirement: 3387548,3389956,3401119
+2, Fix bugs: 3387511,3394894,3394897,3396730,3397389,3398456
+3, Improve Ralasafe privilege efficiency
+
+version:    1.1-v20110728
+BUG FIXED:
+1, I18n common/userListWidget.jsp
+2, Fix UrlAclFilter bugs
+3, Fix i18n bug of userCategory/contextMenu.jsp
+4, Fix bug: [query where design] when "replace with Simple value" is clicked, simple value type of operand 2 not shown
+5, Fix bug: assigning decision policies to privilege, click Test, all policies is dispeared
+6, Fix bug: when search user with a key, total page is refreshed
+7, Fix bug: when delete a privilege, the children privilege isn't deleted cascadly.
+8, Fix bug: privilege tree node drag and drop
+9, Fix bug: install usermetadata in Mac OS
+10,Fix bug: can't reflect javabean properties which are inherited from parent class (commited by BJFantasy)
+11,Fix bug: invalid column mapping while edit query manually
+
+CHANGES:
+1, New ralasafe designer homepage(code name:safe ring)
+2, Add validation for ralasafe web console
+3, Modify RoleManagerImpl.hasPrivilege logic, remove father include
+4, Support "in" expression (business policy design and user category policy design modules)
+
+
+version:    1.1RC1-v20110620
+BUG FIXED:
+1, Fix bug: create reserved query named current user's role. Delete schema attribute from table element.
+2, Many bug fixed.
+
+CHANGES:
+1, Change web console from GWT+EXT to jQuery.
+2, Change ResultSetReaderUtil.java & ResultSetReader.java to support short type.
+
+version:    1.0
+BUG FIXED:
+1, Fix org.ralasafe.webFilter.LoginFilter bug on deploying to ROOT context.
+2, Fix bug: Can't find resource for bundle java.util.PropertyResourceBundle, key noPolicyMatched.
+3, Fix bug: Two chinese charactors in DecisionEntitlementTestPanel.java line 161 & TreeNodeFormatter.java line 60.
+4, Fix bug: Cache problems of org.ralasafe.Factory.
+5, Fix bug: UserRoleManagerImpl.getBusinessPrivilegeTree(User user).
+5, Many bugs fixed on oracle database.
+
+CHANGES:
+1, Release ralasafe demo sql of oracle database.
+2, Release ralasafe demo xml configuration file of oracle database (due to oracle database is case-insensitive).
+
+version:	1.0-rc2-v20100727
+BUG FIX:
+1, Fix count sql bug on oracle 10g;
+2, Fix MapStorgeColumnAdpater bug on UserManager;
+3, Fix some i18n bugs of ralasafe designer;
+
+CHANGES:
+1, Make some changes to build.xml:
+		a, compile task: add debug="true" debuglevel="lines,vars,source" arguments to compiler;
+		b, release task: keep ralasafe_web.xml, don't rename it to web.xml. Avoid user overwrites his/her own web.xml with ralasafe's web.xml;

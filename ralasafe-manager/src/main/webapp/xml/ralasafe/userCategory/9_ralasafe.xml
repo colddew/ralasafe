@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userCategory name="上海合肥区域管理员" isRawScript="false">
+    <defineVariable name="userCompanyLevel">
+        <userValue key="companyLevel"/>
+    </defineVariable>
+    <defineVariable name="OfficeCompanyLevel">
+        <simpleValue type="integer">1</simpleValue>
+    </defineVariable>
+    <defineVariable name="OfficeDepartment">
+        <simpleValue type="integer">3</simpleValue>
+    </defineVariable>
+    <defineVariable name="userDepartment">
+        <userValue key="departmentId"/>
+    </defineVariable>
+    <exprGroup linker="AND">
+        <binaryExpr>
+            <variable1 name="userCompanyLevel"/>
+            <simpleOperator>=</simpleOperator>
+            <variable2 name="OfficeCompanyLevel"/>
+        </binaryExpr>
+        <binaryExpr>
+            <variable1 name="userDepartment"/>
+            <simpleOperator>=</simpleOperator>
+            <variable2 name="OfficeCompanyLevel"/>
+        </binaryExpr>
+    </exprGroup>
+    <rawScript>
+        <content xml:space="preserve"><![CDATA[]]></content>
+    </rawScript>
+</userCategory>

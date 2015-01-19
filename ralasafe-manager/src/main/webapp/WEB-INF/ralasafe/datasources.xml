@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<datasources>
+	<datasource name="ralasafe" configFile="ralasafe-db.properties"/>
+	<datasource name="app" configFile="app-ds.properties" schemas="ralasafe_demo,ralasafe"/>
+	<!-- User schemas attribute for quick web design page loading. Only load special shema tables -->
+	<!--datasource name="app" configFile="app-ds.properties" schemas="schem1, schema2"/-->
+</datasources>

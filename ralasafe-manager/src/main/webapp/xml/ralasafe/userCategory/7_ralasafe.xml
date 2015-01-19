@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userCategory name="所有人" isRawScript="false">
+    <defineVariable name="a">
+        <simpleValue type="string">a</simpleValue>
+    </defineVariable>
+    <exprGroup linker="AND">
+        <binaryExpr>
+            <variable1 name="a"/>
+            <simpleOperator>=</simpleOperator>
+            <variable2 name="a"/>
+        </binaryExpr>
+    </exprGroup>
+    <rawScript>
+        <content xml:space="preserve"><![CDATA[]]></content>
+    </rawScript>
+</userCategory>

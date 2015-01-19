@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query name="本人当天借款记录" ds="app" isRawSQL="false" type="sql">
+    <select isDistinct="false" mappingClass="org.ralasafe.demo.LoanMoney">
+        <column name="id" tableAlias="t0" order="ASC" sqlType="INT(11)"
+            javaType="int" property="id"/>
+        <column name="userId" tableAlias="t0" order="ASC"
+            sqlType="INT(11)" javaType="int" property="userId"/>
+        <column name="money" tableAlias="t0" order="ASC"
+            sqlType="INT(11)" javaType="int" property="money"/>
+        <column name="loanDate" tableAlias="t0" order="ASC"
+            sqlType="DATE(10)" javaType="java.util.Date" property="loanDate"/>
+    </select>
+    <from>
+        <table schema="" name="loan_money" alias="t0"/>
+    </from>
+    <where>
+        <expressionGroup linker="AND">
+            <binaryExpression>
+                <operand1>
+                    <column name="loanDate" tableAlias="t0" order="ASC"/>
+                </operand1>
+                <simpleOperator>=</simpleOperator>
+                <operand2>
+                    <contextValue key="today"/>
+                </operand2>
+            </binaryExpression>
+            <binaryExpression>
+                <operand1>
+                    <column name="userId" tableAlias="t0" order="ASC"/>
+                </operand1>
+                <simpleOperator>=</simpleOperator>
+                <operand2>
+                    <userValue key="id"/>
+                </operand2>
+            </binaryExpression>
+        </expressionGroup>
+    </where>
+    <groupBy/>
+    <orderBy/>
+    <rawSQL>
+        <content xml:space="preserve"><![CDATA[]]></content>
+        <select isDistinct="false"/>
+    </rawSQL>
+    <storedProcedure>
+        <content></content>
+        <select isDistinct="false"/>
+    </storedProcedure>
+</query>

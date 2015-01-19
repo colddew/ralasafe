@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query name="current user&apos;s roles" ds="ralasafe" isRawSQL="false" type="sql">
+    <select isDistinct="false" mappingClass="org.ralasafe.privilege.UserRole">
+        <column name="roleid" tableAlias="t1" order="ASC" javaType="int" property="roleId"/>
+    </select>
+    <from>
+        <table name="ralasafe_ralasafe_userrole" alias="t1"/>
+    </from>
+    <where>
+        <expressionGroup linker="AND">
+            <binaryExpression>
+                <operand1>
+                    <column name="userid" tableAlias="t1" order="ASC"/>
+                </operand1>
+                <simpleOperator>=</simpleOperator>
+                <operand2>
+                    <userValue key="id"/>
+                </operand2>
+            </binaryExpression>
+        </expressionGroup>
+    </where>
+    <rawSQL>
+        <content></content>
+    </rawSQL>
+    <storedProcedure>
+        <content></content>
+        <select isDistinct="false"/>
+    </storedProcedure>
+</query>

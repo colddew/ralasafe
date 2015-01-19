@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<user>
+	<table ds="app" name="mainTable" sqlName="UserView"
+		uniqueFields="loginName">
+		<field name="id" columnName="id" sqlType="int" javaType="java.lang.Integer" />
+		<field name="name" columnName="name" sqlType="varchar(40)"
+			javaType="java.lang.String" displayName="Name" show="true" />
+		<field name="companyName" columnName="companyName" sqlType="varchar(100)"
+			javaType="java.lang.String" displayName="Company" show="true" />
+		<field name="loginName" columnName="loginName" sqlType="varchar(40)"
+			javaType="java.lang.String" />
+		<field name="password" columnName="password" sqlType="varchar(40)"
+			javaType="java.lang.String" />
+		<field name="isManager" columnName="isManager" sqlType="int"
+			javaType="java.lang.Boolean" />
+		<field name="companyId" columnName="companyId" sqlType="int"
+			javaType="java.lang.Integer" />
+		<field name="departmentId" columnName="departmentId" sqlType="int"
+			javaType="java.lang.Integer" />
+		<field name="companyLevel" columnName="companyLevel" sqlType="int"
+			javaType="java.lang.Integer" />
+	</table>
+</user>
+

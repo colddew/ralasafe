@@ -1,0 +1,121 @@
+/**
+ * Copyright (c) 2004-2011 Wang Jinbao(Julian Wong), http://www.ralasafe.com
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+ */
+package org.ralasafe.script;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.Map;
+
+import org.ralasafe.SystemConstant;
+import org.ralasafe.entitle.BusinessDataTestResult;
+import org.ralasafe.entitle.QueryManager;
+import org.ralasafe.user.User;
+import org.ralasafe.util.StringUtil;
+
+import bsh.EvalError;
+import bsh.Interpreter;
+
+public class BusinessData extends AbstractPolicy implements Script {
+	public String getRule() {
+		StringBuffer buff = new StringBuffer();
+		if (isRawScript()) {
+			buff.append(getRawScript().toScript()).append("\n");
+		} else {
+			buff.append("return ").append(getExprGroup().toScript()).append(";\n");
+		}
+		return buff.toString();
+	}
+
+	public String toScript() {
+		if (getScript() == null) {
+
+			StringBuffer buff = new StringBuffer();
+			buff.append("java.util.Map " + SystemConstant.VARIABLE_MAP
+					+ " = new java.util.HashMap();\n");
+			int count = getDefineVaribles().size();
+			for (int i = 0; i < count; i++) {
+				DefineVariable defineVariable = (DefineVariable) getDefineVaribles().get(i);
+				if (defineVariable instanceof QueryRef) {
+					QueryRef queryRef = (QueryRef) defineVariable;
+					if (getExprGroup().isUsedByInExprOrNotInExpr(queryRef
+							.getVariableName())) {
+						buff.append(queryRef.toScript(true));
+					} else {
+						buff.append(queryRef.toScript(false));
+					}
+				} else {
+					buff.append(defineVariable.toScript());
+				}
+				buff.append(SystemConstant.VARIABLE_MAP + ".put( \""
+						+ defineVariable.getVariableName() + "\", "
+						+ defineVariable.getVariableName() + ");\n");
+			}
+			buff.append("\n");
+			// return values is "isBusinessDataValid"
+			String isBusinessDataValid = SystemConstant.IS_BUSINESS_DATA_VALID;
+			if (isRawScript()) {
+				buff.append(getRawScript().toScript() + ";\n");
+				int index = buff.indexOf("return");
+				if (index >= 0) {
+					buff.replace(index, index + 6, " boolean "
+							+ isBusinessDataValid + " = ");
+					buff.append(";\n");
+				} /*else {
+					buff.append(" boolean " + isBusinessDataValid + " = false;");
+				}*/
+			} else {
+				buff.append(" boolean ").append(isBusinessDataValid).append(
+						" = ( ").append(getExprGroup().toScript()).append(" ); \n");
+			}
+
+			setScript( buff.toString() );
+			//this.script = buff.toString();
+		}
+		return getScript();
+	}
+
+	
+
+	public BusinessDataTestResult test(User user, Map context,
+			QueryManager queryManager) {
+		BusinessDataTestResult result = new BusinessDataTestResult();
+		Interpreter interpreter = new Interpreter();
+		String script = toScript();
+		try {
+			eval(interpreter, user, context, queryManager);
+			Boolean contain = (Boolean) interpreter
+					.get(SystemConstant.IS_BUSINESS_DATA_VALID);
+			Map variableMap = (Map) interpreter
+					.get(SystemConstant.VARIABLE_MAP);
+			result.setValid(contain.booleanValue());
+			result.setFailed(false);
+			result.setScript(script);
+			result.setVariableMap(variableMap);
+		} catch (EvalError e) {
+			result.setFailed(true);
+			StringWriter sw=new StringWriter();
+			PrintWriter pw=new PrintWriter( sw );
+			e.printStackTrace( pw );
+			result.setErrorMessage( sw.toString() );
+			result.setScript(script);
+		}
+		return result;
+	}
+
+	private void eval(Interpreter interpreter, User user, Map context,
+			QueryManager queryManager) throws EvalError {
+		String script = toScript();
+		// Set variables
+		interpreter.set(SystemConstant.USER_KEY, user);
+		interpreter.set(SystemConstant.CONTEXT, context);
+		interpreter.set(SystemConstant.QUERY_MANAGER, queryManager);
+
+		java.text.SimpleDateFormat format = new java.text.SimpleDateFormat(
+				"yyyy-MM-dd HH:mm");
+		interpreter.set(SystemConstant.SIMPLE_DATE_FORMAT, format);
+		// eval the rule
+		interpreter.eval(script);
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userCategory name="总公司用户" isRawScript="false">
+    <defineVariable name="headOfficeCompanyLevel">
+        <simpleValue type="integer">1</simpleValue>
+    </defineVariable>
+    <defineVariable name="userCompanyLevel">
+        <userValue key="companyLevel"/>
+    </defineVariable>
+    <exprGroup linker="AND">
+        <binaryExpr>
+            <variable1 name="headOfficeCompanyLevel"/>
+            <simpleOperator>=</simpleOperator>
+            <variable2 name="userCompanyLevel"/>
+        </binaryExpr>
+    </exprGroup>
+    <rawScript>
+        <content xml:space="preserve"><![CDATA[]]></content>
+    </rawScript>
+</userCategory>

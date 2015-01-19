@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query name="查询我所在公司" ds="app" isRawSQL="false" type="sql">
+    <select isDistinct="false" mappingClass="org.ralasafe.demo.Company">
+        <column name="id" tableAlias="t0" order="ASC" sqlType="INT(11)"
+            javaType="int" property="id"/>
+        <column name="name" tableAlias="t0" order="ASC"
+            sqlType="VARCHAR(30)" javaType="java.lang.String" property="name"/>
+        <column name="parentId" tableAlias="t0" order="ASC"
+            sqlType="INT(11)" javaType="int" property="parentId"/>
+        <column name="companyLevel" tableAlias="t0" function=""
+            order="ASC" sqlType="INT(11)" javaType="int"
+            property="level" readOnly="false"/>
+    </select>
+    <from>
+        <table schema="" name="company" alias="t0"/>
+    </from>
+    <where>
+        <expressionGroup linker="AND">
+            <binaryExpression>
+                <operand1>
+                    <column name="id" tableAlias="t0" order="ASC"/>
+                </operand1>
+                <simpleOperator>=</simpleOperator>
+                <operand2>
+                    <userValue key="companyId"/>
+                </operand2>
+            </binaryExpression>
+        </expressionGroup>
+    </where>
+    <groupBy/>
+    <orderBy/>
+    <rawSQL>
+        <content xml:space="preserve"><![CDATA[]]></content>
+        <select isDistinct="false"/>
+    </rawSQL>
+    <storedProcedure>
+        <content></content>
+        <select isDistinct="false"/>
+    </storedProcedure>
+</query>

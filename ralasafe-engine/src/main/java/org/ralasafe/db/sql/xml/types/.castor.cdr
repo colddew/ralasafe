@@ -1,0 +1,8 @@
+#Fri Aug 21 22:38:20 CST 2009
+org.ralasafe.db.sql.xml.types.FormulaTypeOperatorType=org.ralasafe.db.sql.xml.types.descriptors.FormulaTypeOperatorTypeDescriptor
+org.ralasafe.db.sql.xml.types.FormulaTypeTypeType=org.ralasafe.db.sql.xml.types.descriptors.FormulaTypeTypeTypeDescriptor
+org.ralasafe.db.sql.xml.types.QueryTypeTypeType=org.ralasafe.db.sql.xml.types.descriptors.QueryTypeTypeTypeDescriptor
+org.ralasafe.db.sql.xml.types.SimpleOperatorType=org.ralasafe.db.sql.xml.types.descriptors.SimpleOperatorTypeDescriptor
+org.ralasafe.db.sql.xml.types.SimpleValueTypeTypeType=org.ralasafe.db.sql.xml.types.descriptors.SimpleValueTypeTypeTypeDescriptor
+org.ralasafe.db.sql.xml.types.LinkerType=org.ralasafe.db.sql.xml.types.descriptors.LinkerTypeDescriptor
+org.ralasafe.db.sql.xml.types.ColumnTypeOrderType=org.ralasafe.db.sql.xml.types.descriptors.ColumnTypeOrderTypeDescriptor

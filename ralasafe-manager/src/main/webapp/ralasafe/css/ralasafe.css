@@ -1,0 +1,126 @@
+body {
+	margin: 0 auto;
+	width: 1024px;
+	font: 100% normal;
+}
+
+.header {
+	margin: 0 auto;
+	width: 1024px;
+	height: 73px;
+	background: url(../images/logo.jpg) no-repeat;
+	border-bottom: 3px #ddd solid;
+}
+
+.menu {
+	margin: 10px 0 0 10px;
+	min-width: 800px;
+	border-bottom: 3px #ddd solid;
+	font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.subTitle {
+	float: left;
+	margin: 0 0 0 240px;
+	padding-top: 30px;
+	width: 380px;
+}
+
+.prodTitle {
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 30px;
+	width: 200px;
+}
+
+.footer {
+	margin: 30px 0px auto;
+	width: 1024px;
+	height: 30px;
+	border-top: 3px #ddd solid;
+	padding-top: 15px;
+	text-align: center;
+	font-size: 14px;
+}
+
+table {
+	background: #ddd;
+}
+
+.ralaTable {
+	min-width: 600px;
+	background: #ddd;
+}
+
+th,td {
+	font-size: 14px;
+	background: #fff;
+	padding:3px 3px 5px 5px;
+}
+
+th {
+	font-weight: bold;
+	font-size: 14px;
+	background: #eee;
+	padding:3px 3px 5px 5px;
+}
+
+.treeDiv {
+	max-width: 450px;
+	min-height: 300px;
+	overflow:auto;
+	float:left;
+}
+
+.ctxMenuDiv {
+	min-width: 400px;
+	margin:10px;
+	padding:10px;
+	float:left;
+	display:block;;
+}
+
+.editDiv {
+	min-width: 400px;
+	margin:10px;
+	padding:10px;
+	float:left;
+	display:block;;
+}
+
+.aidWord {
+	font-size: 11px;
+	letter-spacing: -1;
+}
+
+.smallContainer {
+	margin: 10px 0 0 10px;
+}
+
+.clearDiv {
+	clear: both;
+	border: none;
+	display: hidden;
+}
+
+label {
+	color: #000000;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    display: block; 
+}
+
+input.error, textarea.error {
+	border: solid 1px red;
+}
+label.error {
+	color:red;
+}
+.textred {
+	color:red;
+ }
