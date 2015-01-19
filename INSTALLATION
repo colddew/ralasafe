@@ -1,0 +1,5 @@
+1.将ralasafe工程中sql/demo-mysql(zh).sql导入到mysql数据库
+2.修改ralasafe-manager工程WEB-INF/ralasafe/app-ds.properties和ralasafe-db.properties的jdbcUser和jdbcPassword
+3.修改ralasafe-manager工程WEB-INF/web.xml中repositoryDir,配置成xml文件夹的绝对路径
+4.访问ralasafe管理控制端,http://localhost:8080/demo/ralasafe/designer.rls
+5.访问demo测试页面,http://localhost:8080/demo/ralasafe/demo/login.jsp
