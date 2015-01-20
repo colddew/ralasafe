@@ -44,7 +44,7 @@
 		<filter-name>ralasafe/UrlAclFilter</filter-name>
 		<url-pattern>/ralasafe/demo/*</url-pattern>
 	</filter-mapping>
-	<!-- End -->
+	<!-- Filter End -->
 	
 	<servlet>
 		<servlet-name>ralasafe</servlet-name>
@@ -60,9 +60,7 @@
 		<load-on-startup>4</load-on-startup>
 	</servlet>
 	
-	
-	
-	<!-- DEMO -->
+	<!-- DEMO START -->
 	<servlet>
 		<servlet-name>ralasafe/demo/DemoLogoutServlet</servlet-name>
 		<servlet-class> org.ralasafe.demo.LogoutServlet</servlet-class>
@@ -82,7 +80,7 @@
 		<url-pattern>*.rls</url-pattern>
 	</servlet-mapping>
 	
-	<!-- DEMO -->
+	<!-- DEMO START -->
 	<servlet-mapping>
 		<servlet-name>ralasafe/demo/DemoLogoutServlet</servlet-name>
 		<url-pattern>/ralasafe/demo/demoLogout</url-pattern>

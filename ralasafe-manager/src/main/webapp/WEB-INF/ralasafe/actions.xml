@@ -126,6 +126,4 @@
 		<action-name>org.ralasafe.servlet.BusinessDataPolicyTestAction</action-name>
 		<url-pattern>/ralasafe/businessData/policyTest.rls</url-pattern>
 	</action-mapping>
-	
-	
 </ralasafe>
