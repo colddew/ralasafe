@@ -2,7 +2,7 @@
 
 Originate from ralasafe 2.0 monolithic architecture, convert to maven multi-module architecture
 
-# Caution
+# Notice
 
 - Github prompt that current version of `commons-fileupload:commons-fileupload` dependency has potential security vulnerabilities, you should upgrade the dependency and solve potential issues
 
